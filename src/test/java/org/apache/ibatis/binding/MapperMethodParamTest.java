@@ -46,6 +46,7 @@ public class MapperMethodParamTest {
     Environment environment = new Environment("Production", transactionFactory, dataSource);
     Configuration configuration = new Configuration(environment);
     configuration.addMapper(Mapper.class);
+    configuration.addLoadedResource("");
     sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
   }
 
